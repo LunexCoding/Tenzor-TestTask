@@ -28,5 +28,3 @@ if __name__ == "__main__":
     scenarioSecond.addAction(GetPartnersAction, "dataAfterChange"),
     scenarioSecond.addAction(CompareDataAction, scenarioSecond, ["dataBeforeChange", "dataAfterChange"])
     scenarioSecond.perform()
-
-

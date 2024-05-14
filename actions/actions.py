@@ -216,8 +216,6 @@ class GetPartnersAction(Action):
                 sity = self._findSity(browser, sityCount)
                 partners[sity] = []
 
-        print(partners)
-
         return {'success': True, self._slotName: partners}
 
     def _findSity(self, browser, sityCount):

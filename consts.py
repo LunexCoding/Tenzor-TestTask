@@ -15,8 +15,7 @@ class DRIVER_TYPES:
     FIREFOX = 1
 
 
-# OPTIONS = ["--headless"]
-OPTIONS = []
+OPTIONS = ["--headless"]
 CHROME_OPTIONS = webdriver.ChromeOptions()
 FIREFOX_OPTIONS = webdriver.FirefoxOptions()
 for option in OPTIONS:

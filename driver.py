@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import (NoSuchElementException, NoSuchDriverException, SessionNotCreatedException,
     TimeoutException, JavascriptException)
 
-from consts import SELECTORS, SELECTOR_TYPES, DRIVER_SETTINGS
+from consts import SELECTOR_TYPES, DRIVER_SETTINGS
 from tools.logger import logger
 
 
@@ -38,6 +38,7 @@ class Browser:
                 _log.debug(f"Open url: {url}")
                 _log.debug(f"{prevUrl} -> {self.url}")
                 return True
+            return False
         except Exception as e:
             _log.error(f"Error occurred while opening page", exc_info=True)
             return False
@@ -141,3 +142,11 @@ class Browser:
     @property
     def title(self):
         return self._driver.title
+
+    @property
+    def settings(self):
+        return self._settings
+
+    @property
+    def driver(self):
+        return self._driver
