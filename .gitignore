@@ -1,0 +1,6 @@
+.idea/
+__pycache__/
+venv/
+drivers/chromedriver.exe
+drivers/geckodriver.exe
+logs/
